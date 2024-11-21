@@ -1,4 +1,4 @@
-# ISO 26262-5: A Practical Guide for Hardware Safety in # ISO 26262-5: A Practical Guide for Hardware Safety in Automotive Systems
+# ISO 26262-5: A Practical Guide for Hardware Safety in Automotive Systems
 
 ## List of Abbreviations
 | Abbreviation | Full Term                                |
@@ -113,6 +113,12 @@ The right side of the V focuses on the verification and validation stages. Each 
 For example, once the functional safety requirements for a steering assistance system have been defined (left side of the V), they are tested and validated later in the process through simulations, tests, and analyses (right side of the V).
 
 The V-model ensures that every aspect of the system is thoroughly tested and validated, preventing safety issues. This makes it a valuable tool within ISO 26262 for the development of complex electronic and software-controlled vehicle systems.
+
+<div style="text-align: center;">
+    <img src="v-model-image.png" alt="SPFM and LFM Metrics" width="500" />
+</div>
+*Figure 3: Overview of SPFM and LFM metrics for hardware safety.*
+
 
 ![ISO 26262 V-Model](path/to/v-model-image.png)  
 *Figure 1: The V-model used in ISO 26262 for system development and validation.*
