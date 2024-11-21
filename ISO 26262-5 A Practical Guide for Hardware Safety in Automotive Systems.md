@@ -46,12 +46,9 @@ The following section addresses the evaluation of hardware architectural metrics
 
 To provide practical insight, the structure concludes with a step-by-step example illustrating how to develop a radar sensor according to ISO 26262-5. This example demonstrates the application of safety goals, hardware specifications, fault detection mechanisms, and validation testing, helping readers understand how ISO 26262-5 requirements translate into real-world tasks, ultimately supporting the creation of safer automotive systems.
 
-## 4. Knowledge-base
-To improve accessibility and usability, the content from this document will be integrated into an internal WIKI-database for RDW currently under development. This will include further information on sensors for autonomous vehicles that contribute to safety, along with other relevant standards.
+## 4. ISO 26262
 
-## 5. ISO 26262
-
-### 5.1 ISO 26262 Overview
+### 4.1 ISO 26262 Overview
 The ISO 26262 standard is an international standard that has been specially developed for the automotive industry, with the aim of guaranteeing the safety of all electronic systems in a vehicle. The standard was introduced in 2011 by the International Organization for Standardization (ISO), which was necessary due to the increasing complexity of vehicles.
 
 Nowadays, cars are becoming more and more dependent on electronic systems such as driver assistance systems, power brakes, power steering, and drive systems. These developments offer many advantages, but they also increase the risk of possible dangerous malfunctions in these electrical systems. ISO 26262 provides a structured approach to identify and manage these risks, better ensuring the safety of the driver and other road users.
@@ -60,50 +57,50 @@ The standard arose from the need to improve the reliability and safety of vehicl
 
 ---
 
-### 5.2 ISO 26262 Classification
+### 4.2 ISO 26262 Classification
 ISO 26262 is made up of 12 parts, each of which deals with a specific phase or aspect of the development process. Each part helps to ensure the safety of vehicles in a structured way, from initial design to scrapping.
 
-#### 5.2.1 Part 1: Vocabulary
+#### 4.2.1 Part 1: Vocabulary
 The first part of ISO 26262 provides a comprehensive glossary of definitions of terms used in the standard. The aim is to create a clear language within the automotive industry that everyone, from designers to suppliers, can understand. This improves communication and prevents misunderstandings during the implementation of the standard.
 
-#### 5.2.2 Part 2: Functional Safety Management
+#### 4.2.2 Part 2: Functional Safety Management
 This section focuses on how functional safety is managed within the development process of a system. It mentions how organizations can follow a structural approach to ensure safety, with attention to planning, risk management, and the allocation of responsible persons or parties. One of these requirements is the appointment of a functional safety manager, who is responsible for overseeing the safety processes and maintaining the necessary documentation. This documentation must be audited by an independent party to comply with the standard.
 
-#### 5.2.3 Part 3: Concept Phase
+#### 4.2.3 Part 3: Concept Phase
 Part 3 is about designing and developing vehicles and systems. In this phase of the project, the focus is on determining what exactly needs to be developed. An important part of this is the **Hazard Analysis and Risk Assessment (HARA)**. During this analysis, possible hazards due to system failures are identified and assessed. Based on these findings, safety objectives are formulated, with each objective being assigned an ASIL. This ASIL classification ranges from A (low risk) to D (high risk), depending on how serious the consequences of a failure could be.
 
-#### 5.2.4 Part 4: System-Level Product Development
+#### 4.2.4 Part 4: System-Level Product Development
 This part focuses on designing safe systems by defining safety requirements. It builds on the functional safety goals previously defined in Part 3. Based on these, specific technical requirements are defined. Safety mechanisms are also developed that can detect and resolve errors in the system. This process ensures that both software and hardware meet the stated safety goals so that the entire system can operate reliably and safely.
 
-#### 5.2.5 Part 5: Hardware-Level Product Development
+#### 4.2.5 Part 5: Hardware-Level Product Development
 Part 5 focuses specifically on hardware system development. It discusses the requirements that hardware components must meet to ensure system safety. This part covers topics such as defining hardware safety requirements, hardware design, and assessing measurable requirements. It also looks at the risk of unexpected hardware failures and how these can affect the functional safety of the system.
 
-#### 5.2.6 Part 6: Software-Level Product Development
+#### 4.2.6 Part 6: Software-Level Product Development
 This part covers the development requirements for software. As with hardware in Part 5, the software requirements are developed based on the safety requirements. It focuses on designing reliable and safe software through rigorous testing, validation, and verification. Integrating safety mechanisms to identify and control software errors is also an important part of this section.
 
-#### 5.2.7 Part 7: Production, Operation, Maintenance, and Dismantling
+#### 4.2.7 Part 7: Production, Operation, Maintenance, and Dismantling
 This part discusses how the functional safety of a system is ensured during production and throughout the entire life cycle of the vehicle, from use and maintenance to dismantling. Planning the production process and identifying possible defects is also of great importance. In addition, regular evaluations and checks are necessary to ensure functional safety.
 
-#### 5.2.8 Part 8: Supporting Processes
+#### 4.2.8 Part 8: Supporting Processes
 Part 8 covers various supporting processes that are important for the safe development of a system according to ISO 26262. Topics such as verification and validation, and risk management are covered. This part helps to control unexpected situations during the development process.
 
-#### 5.2.9 Part 9: ASIL-Oriented and Safety-Oriented Analyses
+#### 4.2.9 Part 9: ASIL-Oriented and Safety-Oriented Analyses
 This part discusses the different methods and techniques that can be used to perform safety analyses during the production process. Safety analyses are necessary to gain insight into the possible failures that can occur during the use of the system and the consequences of these failures. Part 9 provides guidelines for performing these analyses alongside the development process so that safety problems are recognized and solved in a timely manner.
 
-#### 5.2.10 Part 10: Guidelines for the Use of the Standard
+#### 4.2.10 Part 10: Guidelines for the Use of the Standard
 Part 10 provides an overview of the application of the standard and gives developers an insight into the key processes and procedures. This part provides guidelines for the application of the procedures discussed earlier. It provides information on how the ISO 26262 standard can be applied in the development process of a vehicle.
 
-#### 5.2.11 Part 11: Application of ISO 26262 to Semiconductors
+#### 4.2.11 Part 11: Application of ISO 26262 to Semiconductors
 Since semiconductors have different requirements than other systems, this part is intended for the application of ISO 26262 to semiconductors. It focuses on the specific safety requirements relevant to semiconductor components and their function within automotive electrical and electronic systems.
 
-#### 5.2.12 Part 12: Specific Requirements for Motorcycles
+#### 4.2.12 Part 12: Specific Requirements for Motorcycles
 This last part of ISO 26262 describes the safety requirements for motorcycles, as these differ from the requirements for other vehicles. This part contains guidelines and procedures for developing safe electronic and electrical systems specifically for motorcycles.
 
 Together, these parts cover the entire life cycle of a product, from initial design to production, maintenance, and even disassembly.
 
 ---
 
-## 5.3 ISO 26262 V-Model
+## 4.3 ISO 26262 V-Model
 An important part of ISO 26262 is the V-model, which is widely used in the development of systems that are of great importance for safety. This model offers a structured approach where design and verification go hand in hand.
 
 The V-model gets its name from the shape the process takes. The left part of the V describes the phases in which the system requirements are established. Here, the safety goals are set and converted into technical requirements for the different parts of the vehicle, such as system, hardware, and software.
@@ -121,9 +118,9 @@ Figure 3: The V-model used in ISO 26262 for system development and validation
 
 ---
 
-## 6. Automotive Safety Integrity Level (ASIL)
+## 5. Automotive Safety Integrity Level (ASIL)
 
-### 6.1 Determining an ASIL
+### 5.1 Determining an ASIL
 ASIL (Automotive Safety Integrity Level) is a classification system within the ISO 26262 standard for safety in the automotive industry. It assesses the risks of defects in electronic systems in vehicles. ASIL determines how strict the safety measures must be based on the severity of possible accidents, how often dangerous situations can occur, and how well they can be controlled. As a result, ASIL helps manufacturers to take the right safety measures and thus reduce the risk of accidents.
 
 To assign an ASIL value to a system, three factors must be taken into account:
@@ -155,7 +152,7 @@ There are four categories:
 
 (Kochanthara et al., 2021)
 
-### 6.2 Choosing an ASIL
+### 5.2 Choosing an ASIL
 The table below shows the method for determining the ASIL classification based on the three factors: **Severity**, **Exposure**, and **Controllability**.  
 Each combination of these factors results in a specific ASIL value, which is shown in the color-coded table. The ASIL values range from QM (**Quality Management**), which indicates that no formal safety measures are required according to ISO 26262, to ASIL D, the highest safety level where strict measures are required. The ASIL is chosen based on the worst-case combination of severity, exposure, and controllability.
 
@@ -165,7 +162,7 @@ Green boxes represent QM, while the colored boxes from yellow to red indicate AS
 *Figure 2: ASIL classification based on Severity, Exposure, and Controllability.*
 ---
 
-### 6.3 ASIL Classification Examples
+### 5.3 ASIL Classification Examples
 - **ASIL D**: Systems such as the airbag and the anti-lock braking system (ABS) fall into this category because failures here can lead to life-threatening situations, such as unexpected airbag deployment or loss of full braking power at a key moment.
 - **ASIL C to D**: Engine management and Adaptive Cruise Control belong here, due to the risks of unwanted acceleration or braking, which can cause major safety problems.
 - **ASIL B**: Problems with the instrument cluster or headlights are less serious, but can still be dangerous, for example, due to the loss of important information or lighting.
@@ -173,9 +170,9 @@ Green boxes represent QM, while the colored boxes from yellow to red indicate AS
 
 ---
 
-## 7. ISO 26262-5
+## 6. ISO 26262-5
 
-### 7.1 Scope of ISO 26262-5
+### 6.1 Scope of ISO 26262-5
 The scope of ISO 26262-5 focuses on the hardware side of safety-related electrical and electronic systems (E/E systems) in series-produced vehicles, excluding mopeds. This part of the standard provides guidance on functional safety and helps companies to incorporate safety measures into their development processes.
 
 The document deals with the possible risks that arise from the failure of E/E systems at the hardware level and the interaction between these systems. However, it does not focus on hazards such as electric shock, fire, or smoke unless these are directly caused by failures in the E/E systems.
@@ -184,10 +181,10 @@ ISO 26262-5 provides clear guidelines for developing hardware, such as how to es
 
 ---
 
-### 7.2 Main Objectives of ISO 26262-5
+### 6.2 Main Objectives of ISO 26262-5
 Part 5 of the ISO 26262 standard focuses on hardware development and explains how to make hardware, such as sensors in autonomous vehicles, safe. This is important because these sensors collect crucial data for decisions during driving. The main topics are:
 
-#### 7.2.1 Specification of Hardware Safety Requirements (Chapter 6)
+#### 6.2.1 Specification of Hardware Safety Requirements (Chapter 6)
 This explains how to derive safety requirements for hardware from the technical safety plan of the vehicle. It also explains how safety mechanisms work.
 
 ##### Safety Mechanisms
@@ -198,7 +195,7 @@ Safety mechanisms are systems or functions that ensure that a vehicle continues 
 
 ---
 
-#### 7.2.2 Hardware Design (Chapter 7)
+#### 6.2.2 Hardware Design (Chapter 7)
 The hardware design must meet the required safety requirements. For sensors, this means that they must work reliably, even in harsh conditions such as heat, vibrations, or interfering signals.
 
 This chapter emphasizes that a simple hardware structure is important. For sensors, this means that their design should be easy to test and maintain, and that errors can be easily found.
@@ -220,7 +217,7 @@ This is a bottom-up approach where potential failures are analyzed at the compon
 
 ---
 
-#### 7.2.3 Evaluation of Hardware Architectural Metrics (Chapter 8)
+#### 6.2.3 Evaluation of Hardware Architectural Metrics (Chapter 8)
 This section looks at whether the hardware architecture is secure enough. Two important measurement methods are:
 - **Single-Point Fault Metric (SPFM)**: Measures the probability that a single failure in the system will lead directly to a hazardous situation, without a mechanism to detect or correct this failure. The goal is to minimize the occurrence of such failures as much as possible in order to achieve the stated safety requirements.
 - **Latent Fault Metric (LFM)**: Looks at errors in a system that initially go unnoticed and do not pose an immediate danger at that time. However, if a second error occurs later, these errors together can cause problems. It is therefore important that these types of errors are detected in time, so that they do not lead to unsafe situations in the long term.
@@ -232,7 +229,7 @@ The SPFM and LFM requirements become stricter as the ASIL level increases.
 
 ---
 
-#### 7.2.4 Safety Goals and Random Hardware Faults (Chapter 9)
+#### 6.2.4 Safety Goals and Random Hardware Faults (Chapter 9)
 This chapter is about preventing random errors in the hardware from leading to dangerous situations. For sensors, this means that the design must ensure that errors such as incorrect or missing measurements are limited as much as possible, because this can lead to dangerous situations. 
 
 To ensure the safety of systems, the **FIT rate** (Failures In Time) is used to measure failure rates. The requirements for each ASIL level are as follows:
@@ -242,7 +239,7 @@ To ensure the safety of systems, the **FIT rate** (Failures In Time) is used to 
 
 ---
 
-#### 7.2.5 Hardware Integration and Verification (Chapter 10)
+#### 6.2.5 Hardware Integration and Verification (Chapter 10)
 This part focuses on integrating the hardware, such as sensors, into the system and verifying that they meet safety standards. Methods such as testing and simulation are essential to verify that the sensors function properly and can detect faults before they are built in.
 
 ##### Verification Methods
@@ -259,7 +256,7 @@ To ensure reliability under harsh conditions, the hardware is subjected to envir
 
 ---
 
-## 8. Safety-Oriented Design and Validation of a Radar Sensor According to ISO 26262
+## 7. Safety-Oriented Design and Validation of a Radar Sensor According to ISO 26262
 Below is an example of the development procedure of a radar sensor according to ISO 26262. Here the process is taken from determining safety goals to verifying the final hardware.
 
 ### Step 1: Determine the Safety Goals (ISO 26262 Part 3)
@@ -320,7 +317,7 @@ Thorough testing is performed to verify that the radar sensor meets the stated r
 
 ---
 
-## 9. Contributing to the Functional Safety of Sensors
+## 8. Contributing to the Functional Safety of Sensors
 The ISO 26262 standard emphasizes robust design, fault detection, and testing for sensor safety:
 - **Error Detection Mechanisms**: Sensors must detect and correct internal and external faults.
 - **Diagnostic Coverage**: Strict requirements for fault detection, especially for ASIL D sensors.
