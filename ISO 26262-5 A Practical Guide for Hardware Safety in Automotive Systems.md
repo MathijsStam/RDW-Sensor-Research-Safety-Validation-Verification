@@ -175,6 +175,11 @@ Figure 3: ASIL classification based on Severity, Exposure, and Controllability
 ---
 
 ### 5.3 ASIL Classification Examples
+<div style="text-align: center;">
+    <img src="asil-example.png" alt="Figure 2: Examples of ASIL values | ( Leimao's Blog)" width="1000" />
+</div> Figure 2: Examples of ASIL values | ( Leimao's Blog) Accessed from https://leimao.github.io/blog/Functional-Safety-Decomposition/
+Figure 3: The V-model used in ISO 26262 for system development and validation
+
 - **ASIL D**: Systems such as the airbag and the anti-lock braking system (ABS) fall into this category because failures here can lead to life-threatening situations, such as unexpected airbag deployment or loss of full braking power at a key moment.
 - **ASIL C to D**: Engine management and Adaptive Cruise Control belong here, due to the risks of unwanted acceleration or braking, which can cause major safety problems.
 - **ASIL B**: Problems with the instrument cluster or headlights are less serious, but can still be dangerous, for example, due to the loss of important information or lighting.
@@ -191,6 +196,10 @@ The document deals with the possible risks that arise from the failure of E/E sy
 
 ISO 26262-5 provides clear guidelines for developing hardware, such as how to establish safety requirements, design hardware, and check whether the hardware is reliable in the event of unexpected failures. In addition, the standard describes how to ensure that safety objectives are achieved by properly integrating and testing the hardware.
 
+<div style="text-align: center;">
+    <img src="scope-iso.png" alt="Figure 2: Examples of ASIL values | ( Leimao's Blog)" width="1000" />
+</div>Figure 3: Scope of ISO 26262-52
+Figure 3: Figure 3: Scope of ISO 26262-5
 ---
 
 ### 6.2 Main Objectives of ISO 26262-5
@@ -205,6 +214,10 @@ Safety mechanisms are systems or functions that ensure that a vehicle continues 
 - **Control**: Once a problem is discovered, the safety mechanism ensures that the system enters a safe state. This means, for example, that a faulty system can be shut down or that it can switch to a safe mode.
 - **Prevention**: Some mechanisms are designed to prevent errors in the first place, for example, by ensuring that important parts in the system are duplicated (such as two sensors measuring the same thing).
 
+<div style="text-align: center;">
+    <img src="riskasil.png" alt="Figure 2: Examples of ASIL values | ( Leimao's Blog)" width="1000" />
+</div>Figure 4: Figure 4: Safety mechanism lowers the ASIL-value
+Figure 4: Safety mechanism lowers the ASIL-value
 ---
 
 #### 6.2.2 Hardware Design (Chapter 7)
@@ -212,11 +225,21 @@ The hardware design must meet the required safety requirements. For sensors, thi
 
 This chapter emphasizes that a simple hardware structure is important. For sensors, this means that their design should be easy to test and maintain, and that errors can be easily found.
 
+<div style="text-align: center;">
+    <img src="tabel2.png" alt="Table 2: Hardware Architecture Design Properties" width="1000" />
+</div>Table 2: Hardware Architecture Design Properties
+
 ##### Design Method Recommendations
 For each ASIL level (A, B, C, and D), the following recommendations are given for design methods:
 - **[++]**: Indicates that the method is strongly recommended for the identified ASIL.
 - **[+]**: Indicates that the method is recommended for the identified ASIL.
 - **[o]**: Indicates that the method has no recommendation for or against its use for the identified ASIL.
+</div>Table 3: Meaning [++] [+] [o]
+
+<div style="text-align: center;">
+    <img src="tabel3.png" alt="Table 4: Security Analysis of Hardware Design" width="1000" />
+</div>Table 4: Security Analysis of Hardware Design
+
 
 ###### Deductive Analysis
 This is a top-down approach where potential failure events are analyzed to derive possible causes. Techniques such as Fault Tree Analysis (FTA) fall under this.
@@ -227,15 +250,27 @@ This is a top-down approach where potential failure events are analyzed to deriv
 This is a bottom-up approach where potential failures are analyzed at the component level to see how they might affect the system. FMEA (Failure Modes and Effects Analysis) is an example of an inductive method.
 - **ASIL A to D**: Highly recommended at all levels (++ for all ASIL levels).
 
+<div style="text-align: center;">
+    <img src="tabel5.png" alt="Table 5: Hardware Design Verification" width="1000" />
+</div>Table 5: Hardware Design Verification
+
 ---
 
 #### 6.2.3 Evaluation of Hardware Architectural Metrics (Chapter 8)
 This section looks at whether the hardware architecture is secure enough. Two important measurement methods are:
-- **Single-Point Fault Metric (SPFM)**: Measures the probability that a single failure in the system will lead directly to a hazardous situation, without a mechanism to detect or correct this failure. The goal is to minimize the occurrence of such failures as much as possible in order to achieve the stated safety requirements.
-- **Latent Fault Metric (LFM)**: Looks at errors in a system that initially go unnoticed and do not pose an immediate danger at that time. However, if a second error occurs later, these errors together can cause problems. It is therefore important that these types of errors are detected in time, so that they do not lead to unsafe situations in the long term.
+- **Single-Point Fault Metric (SPFM)**: **SPFM** measures the probability that a single failure in the system will lead directly to a hazardous situation, without a mechanism to detect or correct this failure. The goal is to minimize the occurrence of such failures as much as possible in order to achieve the stated safety requirements.
 
-![SPFM and LFM Metrics](path/to/spfm-lfm-metrics-image.png)  
-*Figure 3: Overview of SPFM and LFM metrics for hardware safety.*
+<div style="text-align: center;">
+    <img src="tabel6.png" alt="Table 6: SPFM Rates by ASIL" width="1000" />
+</div>Table 6: SPFM Rates by ASIL
+
+These percentages indicate the degree to which the system must be protected against single-point failures (errors that could lead directly to danger without any error detection mechanism intervening) per assigned ASIL.
+
+- **Latent Fault Metric (LFM)**: **LFM** looks at errors in a system that initially go unnoticed and do not pose an immediate danger at that time. However, if a second error occurs later, these errors together can cause problems. It is therefore important that these types of errors are detected in time, so that they do not lead to unsafe situations in the long term. Although the first error may not be immediately dangerous, it can have serious consequences over time if nothing is done about it.
+<div style="text-align: center;">
+    <img src="tabel7.png" alt="Table 7: LFM Percentages by ASIL" width="1000" />
+</div>Table 7: LFM Percentages by ASIL
+
 
 The SPFM and LFM requirements become stricter as the ASIL level increases.
 
@@ -245,6 +280,10 @@ The SPFM and LFM requirements become stricter as the ASIL level increases.
 This chapter is about preventing random errors in the hardware from leading to dangerous situations. For sensors, this means that the design must ensure that errors such as incorrect or missing measurements are limited as much as possible, because this can lead to dangerous situations. 
 
 To ensure the safety of systems, the **FIT rate** (Failures In Time) is used to measure failure rates. The requirements for each ASIL level are as follows:
+<div style="text-align: center;">
+    <img src="tabel8.png" alt="Table 8: Fit-rate by ASIL" width="1000" />
+</div>Table 8: Fit-rate by ASIL
+
 - **ASIL D**: A maximum of one failure per 100 million hours may occur (10⁻⁸ failures per hour).
 - **ASIL C**: Allows a maximum of one failure per 10 million hours (10⁻⁷ failures per hour).
 - **ASIL B**: Has the same failure requirement as ASIL C (10⁻⁷ failures per hour).
@@ -253,18 +292,26 @@ To ensure the safety of systems, the **FIT rate** (Failures In Time) is used to 
 
 #### 6.2.5 Hardware Integration and Verification (Chapter 10)
 This part focuses on integrating the hardware, such as sensors, into the system and verifying that they meet safety standards. Methods such as testing and simulation are essential to verify that the sensors function properly and can detect faults before they are built in.
+<div style="text-align: center;">
+    <img src="tabel9.png" alt="Table 9: Hardware Integration Tests to Verify Completeness" width="1000" />
+</div>Table 9: Hardware Integration Tests to Verify Completeness
 
 ##### Verification Methods
+<div style="text-align: center;">
+    <img src="tabel10.png" alt="Table 10: Hardware Integration Tests - Durability and Robustness" width="1000" />
+</div>Table 10: Hardware Integration Tests - Durability and Robustness
+
 The table below describes methods for setting up test cases required for hardware integration testing. These test cases ensure that the hardware meets security requirements. Some examples:
 - **Functional Testing**: Verifies that the hardware is performing according to specifications under operating conditions.
 - **Fault Injection Testing**: Simulates failures to see how the hardware responds and whether faults are correctly detected and managed.
 - **Electrical Testing**: Verifies that the hardware meets electrical specifications, such as voltage and signal integrity.
 
 ##### Durability, Robustness, and Operation Under Stress
-To ensure reliability under harsh conditions, the hardware is subjected to environmental stress tests:
-- Extreme temperatures (e.g., from -40°C to 85°C).
-- High levels of vibration and shock.
-- Electromagnetic interference.
+<div style="text-align: center;">
+    <img src="tabel11.png" alt="Table 11: Hardware Integration Tests - Durability, Robustness, and Operation Under Stress" width="1000" />
+</div>Table 10:Hardware Integration Tests - Durability, Robustness, and Operation Under Stress
+
+This table covers methods to test the hardware for durability and reliability under harsh conditions. The methods focus on verifying that the hardware can withstand a variety of environmental and operational challenges.
 
 ---
 
@@ -344,7 +391,18 @@ Autonomous vehicles rely heavily on sensors for safe operation. ISO 26262-5 ensu
 ---
 
 ## Bibliography
-- International Organization for Standardization. (2018). ISO 26262: Road vehicles – Functional safety: Part 1–12. ISO.
-- Kochanthara, S., et al. (2021). A functional safety assessment method for cooperative automotive architecture. Journal of Systems and Software, 179, 110991.
-- Mao, L. (2022). Functional Safety decomposition [Image]. Lei Mao’s Log Book. https://leimao.github.io/blog/Functional-Safety-Decomposition/
 
+1)	International Organization for Standardization. (2018). ISO 26262: Road vehicles – Functional safety: Part 1: Vocabulary (ISO 26262-1:2018). ISO.
+2)	International Organization for Standardization. (2018). ISO 26262: Road vehicles – Functional safety: Part 2: Management of functional safety (ISO 26262-2:2018). ISO.
+3)	International Organization for Standardization. (2018). ISO 26262: Road vehicles – Functional safety: Part 3: Concept phase (ISO 26262-3:2018). ISO.
+4)	International Organization for Standardization. (2018). ISO 26262: Road vehicles – Functional safety: Part 4: System development (ISO 26262-4:2018). ISO.
+5)	International Organization for Standardization. (2018). ISO 26262: Road vehicles – Functional safety: Part 5: Hardware development (ISO 26262-5:2018). ISO.
+6)	International Organization for Standardization. (2018). ISO 26262: Road vehicles – Functional safety: Part 6: Software development (ISO 26262-6:2018). ISO.
+7)	International Organization for Standardization. (2018). ISO 26262: Road vehicles – Functional safety: Part 7: Production and operation (ISO 26262-7:2018). ISO.
+8)	International Organization for Standardization. (2018). ISO 26262: Road vehicles – Functional safety: Part 8: Supporting processes (ISO 26262-8:2018). ISO.
+9)	International Organization for Standardization. (2018). ISO 26262: Road vehicles – Functional safety: Part 9: Functional safety management (ISO 26262-9:2018). ISO.
+10)	International Organization for Standardization. (2018). ISO 26262: Road vehicles – Functional safety: Part 10: Concept of the assessment of functional safety (ISO 26262-10:2018). ISO.
+11)	International Organization for Standardization. (2018). ISO 26262: Road vehicles – Functional safety: Part 11: Guidelines on application of ISO 26262 to semiconductors (ISO 26262-11:2018). ISO.
+12)	International Organization for Standardization. (2018). ISO 26262: Road vehicles – Functional safety: Part 12: Adaptation of ISO 26262 for motorcycles (ISO 26262-12:2018). ISO.
+13)	Kochanthara, S., Rood, N., Saberi, A. K., Cleophas, L., Dajsuren, Y., & Van Den Brand, M. (2021). A functional safety assessment method for cooperative automotive architecture. Journal of Systems and Software, 179, 110991. https://doi.org/10.1016/j.jss.2021.110991
+14)	Mao, L. (2022, April 8). Functional Safety decomposition [Image]. Lei Mao’s Log Book. https://leimao.github.io/blog/Functional-Safety-Decomposition/
