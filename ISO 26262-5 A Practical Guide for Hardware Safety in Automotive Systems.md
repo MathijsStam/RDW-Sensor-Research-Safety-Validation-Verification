@@ -171,8 +171,7 @@ Each combination of these factors results in a specific ASIL value, which is sho
 
 Green boxes represent QM, while the colored boxes from yellow to red indicate ASIL levels A to D. Red is the highest ASIL level, assigned when there are high impacts, common exposures, and low controllability.
 
-![ASIL Classification Table](path/to/asil-classification-table.png)  
-*Figure 2: ASIL classification based on Severity, Exposure, and Controllability.*
+
 ---
 
 ### 5.3 ASIL Classification Examples
