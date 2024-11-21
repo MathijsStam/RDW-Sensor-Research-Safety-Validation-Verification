@@ -117,11 +117,8 @@ The V-model ensures that every aspect of the system is thoroughly tested and val
 <div style="text-align: center;">
     <img src="v-model-image.png" alt="SPFM and LFM Metrics" width="500" />
 </div>
-*Figure 3: Overview of SPFM and LFM metrics for hardware safety.*
+Figure 3: The V-model used in ISO 26262 for system development and validation
 
-
-![ISO 26262 V-Model](path/to/v-model-image.png)  
-*Figure 1: The V-model used in ISO 26262 for system development and validation.*
 ---
 
 ## 6. Automotive Safety Integrity Level (ASIL)
