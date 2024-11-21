@@ -115,7 +115,7 @@ For example, once the functional safety requirements for a steering assistance s
 The V-model ensures that every aspect of the system is thoroughly tested and validated, preventing safety issues. This makes it a valuable tool within ISO 26262 for the development of complex electronic and software-controlled vehicle systems.
 
 <div style="text-align: center;">
-    <img src="v-model-image.png" alt="SPFM and LFM Metrics" width="500" />
+    <img src="v-model-image.png" alt="SPFM and LFM Metrics" width="1000" />
 </div>
 Figure 3: The V-model used in ISO 26262 for system development and validation
 
