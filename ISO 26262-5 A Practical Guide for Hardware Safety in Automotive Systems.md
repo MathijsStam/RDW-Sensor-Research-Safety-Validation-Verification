@@ -17,17 +17,25 @@
 | QM           | Quality Management                      |
 
 ## Glossary of Terms
-| Term                     | Definition                                                                                                                                         |
-|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| ISO 26262               | An international standard for functional safety in the automotive industry, ensuring electronic and electrical systems in vehicles meet rigorous safety requirements. |
-| ASIL                    | Classification system in ISO 26262 that assesses the risk levels for defects in vehicle systems, ranging from QM (Quality Management) to ASIL D (highest safety level). |
-| HARA                    | Process for identifying, assessing, and assigning risks to safety objectives in vehicle system development.                                           |
-| SPFM                    | A metric used to evaluate the likelihood that a single fault directly leads to a hazardous situation.                                               |
-| LFM                     | A metric used to assess the presence of faults that are initially undetected but could lead to danger if combined with additional faults.           |
-| FIT-Rate                | Measurement of failure rate, used in ISO 26262 to determine reliability by calculating the number of failures per billion hours.                     |
-| V-Model                 | A development model in ISO 26262 for defining requirements (left side) and corresponding validation (right side) to ensure system safety at all stages. |
-| Safety Mechanisms       | Methods implemented to detect, control, and prevent system errors, ensuring continued safe operation of the vehicle.                                 |
-| Diagnostic Coverage     | The extent to which safety mechanisms can detect and manage faults within a system, ensuring functionality under various conditions.                |
+## Glossary
+
+| Term                     | Definition                                                                                                                                               |
+|---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **ISO 26262**            | An international standard for functional safety in the automotive industry, ensuring electronic and electrical systems in vehicles meet rigorous safety requirements. |
+| **ASIL**                 | Classification system in ISO 26262 that assesses the risk levels for defects in vehicle systems, ranging from QM (Quality Management) to ASIL D (highest safety level). |
+| **HARA**                 | Process for identifying, assessing, and assigning risks to safety objectives in vehicle system development.                                               |
+| **SPFM**                 | A metric used to evaluate the likelihood that a single fault directly leads to a hazardous situation.                                                     |
+| **LFM**                  | A metric used to assess the presence of faults that are initially undetected but could lead to danger if combined with additional faults.                  |
+| **FIT-Rate**             | Measurement of failure rate, used in ISO 26262 to determine reliability by calculating the number of failures per billion hours.                           |
+| **V-Model**              | A development model in ISO 26262 for defining requirements (left side) and corresponding validation (right side) to ensure system safety at all stages.     |
+| **Safety Mechanisms**    | Methods implemented to detect, control, and prevent system errors, ensuring continued safe operation of the vehicle.                                       |
+| **Functional Safety Requirements** | Requirements that specify the necessary safety functions a system must perform to prevent hazardous situations.                                   |
+| **Technical Safety Requirements**  | Detailed safety specifications derived from functional safety requirements, addressing how a system should meet safety goals.                     |
+| **FTA**                  | A deductive method for analyzing potential failure events by breaking down possible causes in a hierarchical structure.                                   |
+| **FMEA**                 | An inductive approach for analyzing failure impacts on components to prevent safety risks in the system.                                                  |
+| **Diagnostic Coverage**  | The extent to which safety mechanisms can detect and manage faults within a system, ensuring functionality under various conditions.                       |
+| **ADAS**                 | Vehicle systems designed to aid drivers by providing real-time support such as collision warnings, automated braking, and lane assistance.                 |
+
 
 # ISO 26262-5 Accessible Guide
 
@@ -101,6 +109,10 @@ Together, these parts cover the entire life cycle of a product, from initial des
 ---
 
 ## 4.3 ISO 26262 V-Model
+<div style="text-align: center;">
+    <img src="v-model-image.png" alt="ISO 26262 V-Model" width="500" />
+</div>
+*Figure 1: The V-model used in ISO 26262 for system development and validation.*
 An important part of ISO 26262 is the V-model, which is widely used in the development of systems that are of great importance for safety. This model offers a structured approach where design and verification go hand in hand.
 
 The V-model gets its name from the shape the process takes. The left part of the V describes the phases in which the system requirements are established. Here, the safety goals are set and converted into technical requirements for the different parts of the vehicle, such as system, hardware, and software.
@@ -153,6 +165,8 @@ There are four categories:
 (Kochanthara et al., 2021)
 
 ### 5.2 Choosing an ASIL
+![ASIL Classification Table](asil-classification-table.png)
+*Figure 2: ASIL classification based on Severity, Exposure, and Controllability.*
 The table below shows the method for determining the ASIL classification based on the three factors: **Severity**, **Exposure**, and **Controllability**.  
 Each combination of these factors results in a specific ASIL value, which is shown in the color-coded table. The ASIL values range from QM (**Quality Management**), which indicates that no formal safety measures are required according to ISO 26262, to ASIL D, the highest safety level where strict measures are required. The ASIL is chosen based on the worst-case combination of severity, exposure, and controllability.
 
@@ -217,7 +231,9 @@ This is a bottom-up approach where potential failures are analyzed at the compon
 
 ---
 
-#### 6.2.3 Evaluation of Hardware Architectural Metrics (Chapter 8)
+#### 6.2.3 Evaluation of Hardware Architectural Metrics
+![SPFM and LFM Metrics](spfm-lfm-metrics.png)
+*Figure 3: Overview of SPFM and LFM metrics for hardware safety.* (Chapter 8)
 This section looks at whether the hardware architecture is secure enough. Two important measurement methods are:
 - **Single-Point Fault Metric (SPFM)**: Measures the probability that a single failure in the system will lead directly to a hazardous situation, without a mechanism to detect or correct this failure. The goal is to minimize the occurrence of such failures as much as possible in order to achieve the stated safety requirements.
 - **Latent Fault Metric (LFM)**: Looks at errors in a system that initially go unnoticed and do not pose an immediate danger at that time. However, if a second error occurs later, these errors together can cause problems. It is therefore important that these types of errors are detected in time, so that they do not lead to unsafe situations in the long term.
@@ -309,6 +325,10 @@ Hardware metrics are assessed to ensure compliance with safety requirements:
 ---
 
 ### Step 6: Verification and Validation (ISO 26262 Part 5)
+<div style="text-align: center;">
+    <img src="radar-validation-testing.png" alt="Radar Sensor Validation Testing" width="500" />
+</div>
+*Figure 4: Example of radar sensor validation through environmental and fault-injection testing.*
 Thorough testing is performed to verify that the radar sensor meets the stated requirements:
 - **Fault Injection Testing**: Introduce faults to ensure detection mechanisms work.
 - **Environmental Simulations**: Test performance under conditions like rain, fog, and snow.
