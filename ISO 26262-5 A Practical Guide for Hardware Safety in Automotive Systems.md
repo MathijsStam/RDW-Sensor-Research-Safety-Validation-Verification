@@ -17,6 +17,7 @@
 | QM           | Quality Management                      |
 
 ## Glossary of Terms
+## Glossary
 
 | Term                     | Definition                                                                                                                                               |
 |---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -108,10 +109,6 @@ Together, these parts cover the entire life cycle of a product, from initial des
 ---
 
 ## 4.3 ISO 26262 V-Model
-<div style="text-align: center;">
-    <img src="v-model-image.png" alt="ISO 26262 V-Model" width="500" />
-</div>
-*Figure 1: The V-model used in ISO 26262 for system development and validation.*
 An important part of ISO 26262 is the V-model, which is widely used in the development of systems that are of great importance for safety. This model offers a structured approach where design and verification go hand in hand.
 
 The V-model gets its name from the shape the process takes. The left part of the V describes the phases in which the system requirements are established. Here, the safety goals are set and converted into technical requirements for the different parts of the vehicle, such as system, hardware, and software.
@@ -164,14 +161,13 @@ There are four categories:
 (Kochanthara et al., 2021)
 
 ### 5.2 Choosing an ASIL
-![ASIL Classification Table](asil-classification-table.png)
-*Figure 2: ASIL classification based on Severity, Exposure, and Controllability.*
 The table below shows the method for determining the ASIL classification based on the three factors: **Severity**, **Exposure**, and **Controllability**.  
 Each combination of these factors results in a specific ASIL value, which is shown in the color-coded table. The ASIL values range from QM (**Quality Management**), which indicates that no formal safety measures are required according to ISO 26262, to ASIL D, the highest safety level where strict measures are required. The ASIL is chosen based on the worst-case combination of severity, exposure, and controllability.
 
 Green boxes represent QM, while the colored boxes from yellow to red indicate ASIL levels A to D. Red is the highest ASIL level, assigned when there are high impacts, common exposures, and low controllability.
 
-
+![ASIL Classification Table](path/to/asil-classification-table.png)  
+*Figure 2: ASIL classification based on Severity, Exposure, and Controllability.*
 ---
 
 ### 5.3 ASIL Classification Examples
@@ -229,9 +225,7 @@ This is a bottom-up approach where potential failures are analyzed at the compon
 
 ---
 
-#### 6.2.3 Evaluation of Hardware Architectural Metrics
-![SPFM and LFM Metrics](spfm-lfm-metrics.png)
-*Figure 3: Overview of SPFM and LFM metrics for hardware safety.* (Chapter 8)
+#### 6.2.3 Evaluation of Hardware Architectural Metrics (Chapter 8)
 This section looks at whether the hardware architecture is secure enough. Two important measurement methods are:
 - **Single-Point Fault Metric (SPFM)**: Measures the probability that a single failure in the system will lead directly to a hazardous situation, without a mechanism to detect or correct this failure. The goal is to minimize the occurrence of such failures as much as possible in order to achieve the stated safety requirements.
 - **Latent Fault Metric (LFM)**: Looks at errors in a system that initially go unnoticed and do not pose an immediate danger at that time. However, if a second error occurs later, these errors together can cause problems. It is therefore important that these types of errors are detected in time, so that they do not lead to unsafe situations in the long term.
@@ -323,10 +317,6 @@ Hardware metrics are assessed to ensure compliance with safety requirements:
 ---
 
 ### Step 6: Verification and Validation (ISO 26262 Part 5)
-<div style="text-align: center;">
-    <img src="radar-validation-testing.png" alt="Radar Sensor Validation Testing" width="500" />
-</div>
-*Figure 4: Example of radar sensor validation through environmental and fault-injection testing.*
 Thorough testing is performed to verify that the radar sensor meets the stated requirements:
 - **Fault Injection Testing**: Introduce faults to ensure detection mechanisms work.
 - **Environmental Simulations**: Test performance under conditions like rain, fog, and snow.
